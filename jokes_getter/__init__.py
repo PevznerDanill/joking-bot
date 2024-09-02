@@ -1,0 +1,1 @@
+from .get_jokes import get_random_text_joke
