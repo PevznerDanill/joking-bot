@@ -12,7 +12,7 @@ async def main():
     load_dotenv()
     token = getenv("BOT_TOKEN")
     chat_id = getenv("CHAT_ID")
-    frequency = int(getenv("FREQUENCY"))
+
 
     async with Bot(
         token=token,
@@ -20,9 +20,7 @@ async def main():
             parse_mode=ParseMode.HTML,
         ),
     ) as bot:
-        while True:
-            await default_joke_sender(chat_id=chat_id, bot=bot)
-            await asyncio.sleep(frequency)
+        await default_joke_sender(chat_id=chat_id, bot=bot)
 
 
 if __name__ == "__main__":
