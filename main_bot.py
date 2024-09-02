@@ -11,7 +11,7 @@ from sender import default_joke_sender
 async def main():
     load_dotenv()
     token = getenv("BOT_TOKEN")
-    chat_id = getenv("TEST_CHAT_ID")
+    chat_id = getenv("CHAT_ID")
     frequency = int(getenv("FREQUENCY"))
 
     async with Bot(
